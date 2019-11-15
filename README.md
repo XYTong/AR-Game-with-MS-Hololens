@@ -1,5 +1,5 @@
 # Develop a simple AR game with Microsoft Hololens
-practice
+Implement a AR game, which is similar to Whac-A-Mole.[wam]https://en.wikipedia.org/wiki/Whac-A-Mole
 ## Contents  
 
 - [Install](#install)
