@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using System.Text.RegularExpressions;
 
-public class SphereCommands : MonoBehaviour
+public class TuxCommand_Hard : MonoBehaviour
 {
     //global time
     float global_time;
@@ -18,7 +18,7 @@ public class SphereCommands : MonoBehaviour
     void Start()
     {
         countText = cube.GetComponent<TextMeshPro>();
-        times = Random.Range(0, 10);
+        times = Random.Range(0, 5);
         global_time = 60;
         setCountText();
     }
@@ -27,10 +27,10 @@ public class SphereCommands : MonoBehaviour
     void OnSelect()
     {
         //synchrone to score-text
-        if(global_time >= 0)
+        if (global_time >= 0)
         {
             setCountText();
-        } 
+        }
         //music of hitting effect
         gameObject.GetComponent<AudioSource>().Play();
         //disable render and collider of object if being selected
@@ -62,12 +62,12 @@ public class SphereCommands : MonoBehaviour
                     gameObject.GetComponent<Renderer>().enabled = false;
                     transform.GetComponent<Collider>().enabled = false;
                 }
-                times = Random.Range(0, 10);
+                times = Random.Range(0, 5);
             }
         }
         else
         {
-            SceneManager.UnloadSceneAsync("Play");
+            SceneManager.UnloadSceneAsync("Play_Hard");
         }
     }
     void setCountText()
